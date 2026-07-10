@@ -31,6 +31,14 @@ def search_incruit(keyword,page=5):
 
     return jobs
 
+def search_hrd24(keyword):
+    url=("https://www.work24.go.kr/cm/f/c/0100/selectUnifySearch.do"
+        f"?topQuerySearchArea=tb_workinfo&topQueryData={keyword}"
+    )
+    r = requests.get(url)
+    soup=BeautifulSoup(r.text,"html.parser")
+    lis=soup.find()
+
     
 
 
