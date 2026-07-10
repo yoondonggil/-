@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-def search_incruit(keyword,page=2):
+def search_incruit(keyword,page=5):
     jobs=[]
 
     for i in range(page):
@@ -30,6 +30,7 @@ def search_incruit(keyword,page=2):
 
 
     return jobs
+
     
 
 

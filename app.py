@@ -1,7 +1,11 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request,send_file,redirect
 from scrapper import search_incruit
+from file import save_to_csv
 
 app = Flask(__name__)
+
+db={}
+page=5
 
 @app.route('/')
 def hello_world():
@@ -10,13 +14,29 @@ def hello_world():
 @app.route("/search")
 def search():
     keyword = request.args.get("keyword")
-    print(keyword)
-    jobs =search_incruit(keyword,2)
-    print(jobs)
+    if keyword=="":
+        return redirect("/")
+    
+    if keyword in db:
+        jobs = db[keyword]
+    else:
+        jobs =search_incruit(keyword,page)
+        db[keyword]=jobs
+
     return render_template("search.html", jobs=enumerate(jobs),keyword=keyword,count=len(jobs))
 @app.route("/file")
 def file():
-    return "file"
+    keyword=request.args.get("keyword")
+    if keyword=="":
+        return redirect("/")
+    if keyword in db:
+        jobs=db[keyword]
+    else:
+        jobs=search_incruit(keyword,page)
+    
+    save_to_csv(jobs)
+    return send_file("./downloads.csv",as_attachment=True)
+    
 
 
 if __name__ == '__main__':
