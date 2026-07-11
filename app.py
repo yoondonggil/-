@@ -11,11 +11,13 @@ page = 2
 @app.route("/")
 def home():
     return render_template("index.html")
+
+
 @app.route("/search")
 def search():
     keyword = request.args.get("keyword")
 
-    if keyword == "":
+    if not keyword:  # None 이나 "" 둘 다 걸러짐
         return redirect("/")
 
     incruit_jobs = search_incruit(keyword, page)
@@ -40,13 +42,17 @@ def search():
 def file():
     keyword = request.args.get("keyword")
 
-    if keyword == "":
+    if not keyword:
         return redirect("/")
 
     if keyword in db:
         jobs = db[keyword]
     else:
-        jobs = search_incruit(keyword, page)
+        # db에 없으면 인크루트 + 고용24 둘 다 다시 검색
+        incruit_jobs = search_incruit(keyword, page)
+        work24_jobs = search_work24(keyword)
+        jobs = incruit_jobs + work24_jobs
+        db[keyword] = jobs  # 다음번엔 재사용하도록 캐싱
 
     save_to_csv(jobs)
 
