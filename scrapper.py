@@ -2,8 +2,8 @@ import re
 import time
 from urllib.parse import quote, urljoin
 
-from bs4 import BeautifulSoup
 import requests
+from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -22,11 +22,10 @@ HEADERS = {
 }
 
 # (목록 URL, 선수 유형, 리그 구분)
-# Basic1.aspx = 규정이닝/타석 제한 없는 신버전 페이지
-# 투수는 세이브순 정렬해서 마무리/셋업맨이 앞쪽 페이지에 오도록 함
+# GAME_CN(경기수) 정렬 = 누적기록이라 보직/기록 종류에 상관없이 골고루 잡힘
 SOURCES = [
     (f"{KBO_BASE_URL}/Record/Player/HitterBasic/Basic1.aspx?sort=GAME_CN", "타자", "1군"),
-    (f"{KBO_BASE_URL}/Record/Player/PitcherBasic/Basic1.aspx?sort=SV_CN", "투수", "1군"),
+    (f"{KBO_BASE_URL}/Record/Player/PitcherBasic/Basic1.aspx?sort=GAME_CN", "투수", "1군"),
     (f"{KBO_BASE_URL}/Futures/Player/Hitter.aspx", "타자", "2군"),
     (f"{KBO_BASE_URL}/Futures/Player/Pitcher.aspx", "투수", "2군"),
 ]
@@ -105,7 +104,7 @@ def find_player_candidates(keyword):
             time.sleep(1.5)
 
             page_num = 1
-            while page_num <= 10:
+            while page_num <= 20:
                 soup = BeautifulSoup(driver.page_source, "html.parser")
                 rows = soup.select(ROW_SELECTOR)
 
@@ -140,16 +139,12 @@ def find_player_candidates(keyword):
                         "league": league,
                     })
 
-                # 못 찾았으면 다음 페이지로 이동
                 if candidates:
-                    break
+                    break  # 이 소스에서 찾았으면 다음 페이지 안 넘어감
 
                 moved = False
-
                 try:
-                    next_btn = driver.find_element(
-                        By.CSS_SELECTOR, f"a[id*='btnNo{page_num + 1}']"
-                    )
+                    next_btn = driver.find_element(By.CSS_SELECTOR, f"a[id*='btnNo{page_num + 1}']")
                     next_btn.click()
                     time.sleep(1.2)
                     page_num += 1
@@ -159,9 +154,7 @@ def find_player_candidates(keyword):
 
                 if not moved:
                     try:
-                        next_group_btn = driver.find_element(
-                            By.CSS_SELECTOR, "a[id*='btnNext']"
-                        )
+                        next_group_btn = driver.find_element(By.CSS_SELECTOR, "a[id*='btnNext']")
                         next_group_btn.click()
                         time.sleep(1.2)
                         page_num += 1
@@ -170,12 +163,11 @@ def find_player_candidates(keyword):
                         pass
 
                 if not moved:
-                    break  # 더 이상 페이지 없음
+                    break
 
         finally:
             driver.quit()
 
-        # 1군에서 이미 찾았으면 2군까지 갈 필요 없음
         if candidates and league == "1군":
             break
 
@@ -358,16 +350,17 @@ def search_kbo_player_record(keyword):
 
 
 def search_baseball_news(keyword, limit=20):
+    """다음 뉴스 검색은 정적 렌더링이라 requests로 충분하다."""
+
     news = []
     search_url = f"https://search.daum.net/search?w=news&q={quote(keyword + ' 야구')}"
 
-    driver = create_driver()
     try:
-        driver.get(search_url)
-        time.sleep(3)
-        soup = BeautifulSoup(driver.page_source, "html.parser")
-    finally:
-        driver.quit()
+        r = requests.get(search_url, headers=HEADERS, timeout=10)
+    except requests.RequestException:
+        return news
+
+    soup = BeautifulSoup(r.text, "html.parser")
 
     title_tags = soup.select(
         "a.tit_main, a.f_link_b, a[data-tiara-layer='title'], "
