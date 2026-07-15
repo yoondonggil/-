@@ -2,44 +2,287 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <title>전체 선수 기록 | KBO Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>전체 선수 기록 | KBO 선수 검색기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gothic+A1:wght@400;500;700;900&display=swap"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
     />
+    <style>
+      :root {
+        --navy: #0b1f3a;
+        --navy-2: #0f2a4d;
+        --navy-3: #14335c;
+        --green: #1f7a4d;
+        --green-bright: #2fae74;
+        --chalk: #f5f3ec;
+        --red: #c8372c;
+        --amber: #f2a93b;
+        --ink: #14213d;
+        --muted: #6b7280;
+        --line: #e3e0d4;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--chalk);
+        color: var(--ink);
+        font-family: "Gothic A1", sans-serif;
+      }
+
+      .topbar {
+        background: var(--navy);
+        border-bottom: 3px solid var(--amber);
+      }
+      .topbar-inner {
+        width: min(1100px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 18px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .brand {
+        font-family: "Black Han Sans", sans-serif;
+        color: var(--chalk);
+        text-decoration: none;
+        font-size: 19px;
+      }
+      .brand span {
+        color: var(--amber);
+      }
+      .back-link {
+        color: #a9bad4;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .back-link:hover {
+        color: var(--chalk);
+      }
+
+      .page {
+        width: min(1100px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 40px 0 80px;
+      }
+
+      .page-header {
+        margin-bottom: 26px;
+      }
+      .eyebrow {
+        display: block;
+        color: var(--green);
+        font-size: 12.5px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        margin-bottom: 6px;
+      }
+      h1 {
+        font-family: "Black Han Sans", sans-serif;
+        font-size: clamp(26px, 4vw, 36px);
+        margin: 0 0 8px;
+      }
+      .sub {
+        color: var(--muted);
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .sub strong {
+        color: var(--red);
+      }
+
+      .filters {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin: 22px 0 24px;
+      }
+      .filters a {
+        padding: 8px 16px;
+        border-radius: 999px;
+        border: 1.5px solid var(--line);
+        background: #fff;
+        color: var(--ink);
+        text-decoration: none;
+        font-size: 12.5px;
+        font-weight: 800;
+        transition:
+          border-color 0.15s ease,
+          color 0.15s ease;
+      }
+      .filters a.active,
+      .filters a:hover {
+        border-color: var(--green);
+        color: var(--green);
+        background: rgba(31, 122, 77, 0.06);
+      }
+
+      .table-wrap {
+        background: #fff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 14px 34px rgba(11, 31, 58, 0.08);
+        border: 1px solid var(--line);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+      thead tr {
+        background: var(--navy);
+      }
+      thead th {
+        color: var(--chalk);
+        text-align: left;
+        padding: 14px 16px;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 1px;
+      }
+      thead th.num {
+        text-align: center;
+        width: 50px;
+      }
+      tbody td {
+        padding: 13px 16px;
+        border-bottom: 1px solid var(--line);
+      }
+      tbody tr:last-child td {
+        border-bottom: none;
+      }
+      tbody tr:hover {
+        background: #fbf9f2;
+      }
+      td.num {
+        text-align: center;
+        color: var(--muted);
+        font-weight: 700;
+        font-size: 12.5px;
+      }
+      td.name {
+        font-weight: 900;
+        color: var(--ink);
+      }
+      .type-pill {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 999px;
+        font-size: 11px;
+        font-weight: 900;
+      }
+      .type-pill.batter {
+        background: rgba(31, 122, 77, 0.12);
+        color: var(--green);
+      }
+      .type-pill.pitcher {
+        background: rgba(200, 55, 44, 0.1);
+        color: var(--red);
+      }
+      td.stat {
+        font-family: "Black Han Sans", sans-serif;
+        color: var(--navy);
+        font-size: 15px;
+      }
+
+      footer.note {
+        margin-top: 20px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 12.5px;
+      }
+
+      @media (max-width: 700px) {
+        .table-wrap {
+          overflow-x: auto;
+        }
+        table {
+          min-width: 620px;
+        }
+      }
+    </style>
   </head>
+
   <body>
-    <main class="container">
-      <h1>KBO 선수 기록 전체 목록</h1>
-      <p>총 {{ count }}개 (전체 {{ total }}개 중)</p>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a href="/" class="brand">KBO<span>·</span>선수검색기</a>
+        <a href="/" class="back-link">← 검색으로 돌아가기</a>
+      </div>
+    </header>
 
-      <table>
-        <thead>
-          <tr>
-            <th>연도</th>
-            <th>유형</th>
-            <th>이름</th>
-            <th>팀</th>
-            <th>기록</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for p in players %}
-          <tr>
-            <td>{{ p["year"] }}</td>
-            <td>{{ p["type"] }}</td>
-            <td>{{ p["name"] }}</td>
-            <td>{{ p["team"] }}</td>
-            <td>
-              {% if p["type"] == "타자" %} 타율 {{ p["average"] }} {% else %}
-              ERA {{ p["era"] }} {% endif %}
-            </td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+    <main class="page">
+      <div class="page-header">
+        <span class="eyebrow">FULL ROSTER</span>
+        <h1>전체 선수 기록</h1>
+        <p class="sub">
+          총 <strong>{{ count }}</strong>개 수집 (전체 {{ total }}개 중 표시)
+        </p>
+      </div>
 
-      <a href="/">← 검색으로 돌아가기</a>
+      <div class="filters">
+        <a
+          href="/players"
+          class="{{ 'active' if not request.args.get('type') and not request.args.get('year') }}"
+          >전체</a
+        >
+        <a
+          href="/players?type=타자"
+          class="{{ 'active' if request.args.get('type') == '타자' }}"
+          >타자</a
+        >
+        <a
+          href="/players?type=투수"
+          class="{{ 'active' if request.args.get('type') == '투수' }}"
+          >투수</a
+        >
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th class="num">No</th>
+              <th>연도</th>
+              <th>유형</th>
+              <th>이름</th>
+              <th>팀</th>
+              <th>기록</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for p in players %}
+            <tr>
+              <td class="num">{{ loop.index }}</td>
+              <td>{{ p["year"] }}</td>
+              <td>
+                {% if p["type"] == "타자" %}
+                <span class="type-pill batter">타자</span>
+                {% else %}
+                <span class="type-pill pitcher">투수</span>
+                {% endif %}
+              </td>
+              <td class="name">{{ p["name"] }}</td>
+              <td>{{ p["team"] }}</td>
+              <td class="stat">
+                {% if p["type"] == "타자" %} 타율 {{ p["average"] }} {% else %}
+                ERA {{ p["era"] }} {% endif %}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <footer class="note">
+        KBO 공식 기록실 기준으로 수집된 데이터입니다.
+      </footer>
     </main>
   </body>
 </html>

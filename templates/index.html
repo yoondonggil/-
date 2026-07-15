@@ -2,153 +2,308 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>KBO 선수 기록 검색기</title>
-
+    <title>KBO 선수 검색기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gothic+A1:wght@400;500;700;900&display=swap"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
     />
-
     <style>
+      :root {
+        --navy: #0b1f3a;
+        --navy-2: #0f2a4d;
+        --navy-3: #14335c;
+        --green: #1f7a4d;
+        --green-bright: #2fae74;
+        --chalk: #f5f3ec;
+        --red: #c8372c;
+        --amber: #f2a93b;
+        --ink: #14213d;
+        --muted: #9fb0c9;
+      }
+
       * {
         box-sizing: border-box;
       }
 
       body {
         margin: 0;
-        min-height: 100vh;
-        background:
-          radial-gradient(
-            circle at top left,
-            rgba(41, 98, 180, 0.42),
-            transparent 35%
-          ),
-          linear-gradient(135deg, #071426, #123864);
+        background: var(--navy);
+        color: var(--chalk);
+        font-family: "Gothic A1", sans-serif;
+        overflow-x: hidden;
       }
 
-      .hero {
+      /* ---------- decorative diamond field ---------- */
+      .field-bg {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        overflow: hidden;
+      }
+      .diamond {
+        position: absolute;
+        border: 2px solid var(--green);
+        opacity: 0.14;
+        transform: rotate(45deg);
+      }
+      .diamond.d1 {
+        width: 640px;
+        height: 640px;
+        top: -280px;
+        right: -280px;
+      }
+      .diamond.d2 {
+        width: 380px;
+        height: 380px;
+        bottom: -180px;
+        left: -180px;
+        border-color: var(--amber);
+        opacity: 0.1;
+      }
+      .stitch {
+        position: absolute;
+        width: 100%;
+        border-top: 2px dashed rgba(245, 243, 236, 0.06);
+      }
+
+      /* ---------- layout ---------- */
+      main {
+        position: relative;
+        z-index: 1;
         min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 30px 20px;
+        padding: 32px 20px;
       }
 
-      .search-card {
-        width: min(760px, 100%);
-        padding: 52px;
-        border: 1px solid rgba(255, 255, 255, 0.7);
-        border-radius: 28px;
-        background: rgba(255, 255, 255, 0.97);
-        box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+      .console {
+        width: min(620px, 100%);
+        text-align: center;
       }
 
-      .badge {
-        display: inline-block;
-        margin-bottom: 18px;
-        padding: 8px 14px;
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 16px;
+        border: 1px solid rgba(242, 169, 59, 0.4);
         border-radius: 999px;
-        background: #e7efff;
-        color: #174ea6;
-        font-size: 14px;
-        font-weight: 800;
+        color: var(--amber);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 28px;
+      }
+      .eyebrow::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--amber);
+        box-shadow: 0 0 8px var(--amber);
       }
 
       h1 {
-        margin-bottom: 16px;
-        color: #10233f;
-        font-size: clamp(38px, 6vw, 62px);
-        line-height: 1.08;
-        letter-spacing: -2.5px;
+        font-family: "Black Han Sans", sans-serif;
+        font-size: clamp(38px, 7vw, 60px);
+        line-height: 1.18;
+        margin: 0 0 16px;
+        letter-spacing: 1px;
+      }
+      h1 .hl {
+        color: var(--green-bright);
       }
 
-      .description {
-        margin-bottom: 32px;
-        color: #667085;
+      .lead {
+        color: var(--muted);
         font-size: 17px;
-        line-height: 1.75;
+        line-height: 1.7;
+        margin: 0 0 40px;
+        font-weight: 500;
+      }
+
+      /* ---------- scoreboard search console ---------- */
+      .board {
+        background: linear-gradient(180deg, var(--navy-3), var(--navy-2));
+        border: 1px solid rgba(242, 169, 59, 0.25);
+        border-radius: 20px;
+        padding: 28px;
+        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+        text-align: left;
+      }
+
+      .board-label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 14px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: var(--muted);
+      }
+      .board-label .dots span {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--green-bright);
+        margin-left: 4px;
+        opacity: 0.5;
+      }
+      .board-label .dots span:last-child {
+        opacity: 1;
+        box-shadow: 0 0 6px var(--green-bright);
       }
 
       .search-form {
         display: grid;
         grid-template-columns: 1fr auto;
-        gap: 12px;
+        gap: 10px;
         margin: 0;
-      }
-
-      .search-form input,
-      .search-form button {
-        height: 60px;
-        margin: 0;
-        border-radius: 15px;
       }
 
       .search-form input {
+        height: 58px;
+        border-radius: 12px;
+        border: 1px solid rgba(245, 243, 236, 0.14);
+        background: rgba(11, 31, 58, 0.6);
+        color: var(--chalk);
+        font-family: "Gothic A1", sans-serif;
+        font-size: 20px;
+        font-weight: 700;
         padding: 0 20px;
-        font-size: 17px;
+        outline: none;
+        transition:
+          border-color 0.15s ease,
+          box-shadow 0.15s ease;
+      }
+      .search-form input::placeholder {
+        color: rgba(245, 243, 236, 0.35);
+        font-weight: 500;
+      }
+      .search-form input:focus {
+        border-color: var(--amber);
+        box-shadow: 0 0 0 3px rgba(242, 169, 59, 0.18);
       }
 
       .search-form button {
-        padding: 0 32px;
-        border: 0;
-        background: #174ea6;
-        font-weight: 700;
+        height: 58px;
+        padding: 0 26px;
+        border: none;
+        border-radius: 12px;
+        background: var(--red);
+        color: var(--chalk);
+        font-family: "Gothic A1", sans-serif;
+        font-size: 16px;
+        font-weight: 900;
+        cursor: pointer;
+        transition:
+          transform 0.12s ease,
+          background 0.15s ease;
+        white-space: nowrap;
+      }
+      .search-form button:hover {
+        background: #e0453a;
+      }
+      .search-form button:active {
+        transform: scale(0.96);
       }
 
       .examples {
         margin: 22px 0 0;
-        color: #8992a3;
-        font-size: 14px;
+        padding-top: 18px;
+        border-top: 1px dashed rgba(245, 243, 236, 0.12);
+        font-size: 13px;
+        color: var(--muted);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+      }
+      .examples .tag {
+        font-weight: 700;
+        color: var(--chalk);
+        margin-right: 4px;
+      }
+      .examples .chip {
+        padding: 5px 12px;
+        border-radius: 999px;
+        background: rgba(47, 174, 116, 0.14);
+        color: var(--green-bright);
+        font-weight: 700;
+        font-size: 12.5px;
       }
 
-      @media (max-width: 640px) {
-        .search-card {
-          padding: 34px 23px;
-        }
+      footer {
+        margin-top: 34px;
+        text-align: center;
+        font-size: 12px;
+        color: rgba(159, 176, 201, 0.6);
+        letter-spacing: 0.5px;
+      }
 
+      @media (max-width: 480px) {
         .search-form {
           grid-template-columns: 1fr;
         }
-
-        .search-form button {
-          width: 100%;
+        .board {
+          padding: 22px;
         }
       }
     </style>
   </head>
 
   <body>
-    <main class="hero">
-      <section class="search-card">
-        <span class="badge"> KBO PLAYER SEARCH </span>
+    <div class="field-bg">
+      <div class="diamond d1"></div>
+      <div class="diamond d2"></div>
+      <div class="stitch" style="top: 32%"></div>
+      <div class="stitch" style="top: 68%"></div>
+    </div>
 
-        <h1>
-          선수 기록과<br />
-          야구 뉴스를 한 번에
-        </h1>
+    <main>
+      <div class="console">
+        <span class="eyebrow">KBO PLAYER SEARCH</span>
 
-        <p class="description">
-          선수 이름을 입력하면 KBO 공식 시즌 기록과 해당 선수의 관련 야구 뉴스를
-          함께 보여줍니다.
+        <h1>선수 기록과<br /><span class="hl">야구 뉴스</span>를 한 번에</h1>
+        <p class="lead">
+          선수 이름을 입력하면 KBO 공식 시즌 기록과 관련 야구 뉴스를 함께
+          찾아드립니다.
         </p>
 
-        <form action="/search" method="get" class="search-form">
-          <input
-            type="text"
-            name="keyword"
-            placeholder="선수 이름을 입력하세요"
-            autocomplete="off"
-            required
-          />
+        <div class="board">
+          <div class="board-label">
+            <span>SEARCH CONSOLE</span>
+            <span class="dots"><span></span><span></span><span></span></span>
+          </div>
 
-          <button type="submit">검색하기</button>
-        </form>
+          <form action="/search" method="get" class="search-form">
+            <input
+              type="text"
+              name="keyword"
+              placeholder="선수 이름을 입력하세요"
+              autocomplete="off"
+              required
+            />
+            <button type="submit">검색하기</button>
+          </form>
 
-        <p class="examples">검색 예시: 윤동희 · 김진욱 · 원태인 · 구자욱</p>
-      </section>
+          <div class="examples">
+            <span class="tag">검색 예시</span>
+            <span class="chip">윤동희</span>
+            <span class="chip">김재윤</span>
+            <span class="chip">구자욱</span>
+            <span class="chip">나승엽</span>
+          </div>
+        </div>
+
+        <footer>KBO 공식 기록실 · 다음 뉴스 기반</footer>
+      </div>
     </main>
   </body>
 </html>
