@@ -1,11 +1,20 @@
-from flask import Flask, render_template, request, send_file, redirect
-from scrapper import search_incruit, search_work24
+from flask import (
+    Flask,
+    render_template,
+    request,
+    redirect,
+    send_file
+)
+
+from scrapper import (
+    search_kbo_player_record,
+    search_baseball_news
+)
+
 from file import save_to_csv
 
-app = Flask(__name__)
 
-db = {}
-page = 2
+app = Flask(__name__)
 
 
 @app.route("/")
@@ -15,52 +24,92 @@ def home():
 
 @app.route("/search")
 def search():
-    keyword = request.args.get("keyword")
+    keyword = request.args.get(
+        "keyword",
+        ""
+    ).strip()
 
-    if not keyword:  # None 이나 "" 둘 다 걸러짐
+    if keyword == "":
         return redirect("/")
 
-    incruit_jobs = search_incruit(keyword, page)
-    work24_jobs = search_work24(keyword)
+    players = search_kbo_player_record(keyword)
+    news = search_baseball_news(keyword)
 
-    jobs = incruit_jobs + work24_jobs
+    count = len(players) + len(news)
 
-    db[keyword] = jobs
+    print("검색어:", keyword)
+    print("선수 기록:", len(players))
+    print("관련 뉴스:", len(news))
 
     return render_template(
-        "result.html",
-        incruit_jobs=enumerate(incruit_jobs),
-        work24_jobs=enumerate(work24_jobs),
+        "search.html",
         keyword=keyword,
-        count=len(jobs),
-        incruit_count=len(incruit_jobs),
-        work24_count=len(work24_jobs)
+        players=players,
+        news=news,
+        count=count
     )
 
 
 @app.route("/file")
-def file():
-    keyword = request.args.get("keyword")
+def download_file():
+    keyword = request.args.get(
+        "keyword",
+        ""
+    ).strip()
 
-    if not keyword:
+    if keyword == "":
         return redirect("/")
 
-    if keyword in db:
-        jobs = db[keyword]
-    else:
-        # db에 없으면 인크루트 + 고용24 둘 다 다시 검색
-        incruit_jobs = search_incruit(keyword, page)
-        work24_jobs = search_work24(keyword)
-        jobs = incruit_jobs + work24_jobs
-        db[keyword] = jobs  # 다음번엔 재사용하도록 캐싱
+    players = search_kbo_player_record(keyword)
+    news = search_baseball_news(keyword)
 
-    save_to_csv(jobs)
+    save_to_csv(
+        players,
+        news
+    )
 
     return send_file(
         "./downloads.csv",
-        as_attachment=True
+        as_attachment=True,
+        download_name=f"{keyword}_KBO_검색결과.csv"
     )
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5001)
+    app.run(
+        debug=True,
+        port=5000
+    )
+
+import json
+
+# ... 기존 import들 아래에 추가
+
+def load_players_db():
+    try:
+        with open("players_db.json", "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return []
+
+
+@app.route("/players")
+def players_list():
+    all_players = load_players_db()
+
+    # 필터링 옵션 (선택)
+    player_type = request.args.get("type", "")  # "타자" or "투수"
+    year = request.args.get("year", "")
+
+    filtered = all_players
+    if player_type:
+        filtered = [p for p in filtered if p["type"] == player_type]
+    if year:
+        filtered = [p for p in filtered if str(p["year"]) == year]
+
+    return render_template(
+        "players.html",
+        players=filtered,
+        count=len(filtered),
+        total=len(all_players)
+    )

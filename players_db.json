@@ -1,0 +1,2402 @@
+[
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "1",
+    "name": "이정후",
+    "team": "키움",
+    "average": "0.360"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "2",
+    "name": "전준우",
+    "team": "롯데",
+    "average": "0.348"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "3",
+    "name": "강백호",
+    "team": "KT",
+    "average": "0.347"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "4",
+    "name": "홍창기",
+    "team": "LG",
+    "average": "0.328"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "5",
+    "name": "박건우",
+    "team": "두산",
+    "average": "0.325"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "6",
+    "name": "양의지",
+    "team": "NC",
+    "average": "0.325"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "7",
+    "name": "손아섭",
+    "team": "롯데",
+    "average": "0.319"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "8",
+    "name": "페르난데스",
+    "team": "두산",
+    "average": "0.315"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "9",
+    "name": "김선빈",
+    "team": "KIA",
+    "average": "0.307"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "10",
+    "name": "안치홍",
+    "team": "롯데",
+    "average": "0.306"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "11",
+    "name": "구자욱",
+    "team": "삼성",
+    "average": "0.306"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "12",
+    "name": "김혜성",
+    "team": "키움",
+    "average": "0.304"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "13",
+    "name": "박성한",
+    "team": "SSG",
+    "average": "0.302"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "14",
+    "name": "이용규",
+    "team": "키움",
+    "average": "0.296"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "15",
+    "name": "최원준",
+    "team": "KIA",
+    "average": "0.295"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "16",
+    "name": "정훈",
+    "team": "롯데",
+    "average": "0.292"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "17",
+    "name": "황재균",
+    "team": "KT",
+    "average": "0.291"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "18",
+    "name": "박해민",
+    "team": "삼성",
+    "average": "0.291"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "19",
+    "name": "강민호",
+    "team": "삼성",
+    "average": "0.291"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "20",
+    "name": "이대호",
+    "team": "롯데",
+    "average": "0.286"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "20",
+    "name": "피렐라",
+    "team": "삼성",
+    "average": "0.286"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "22",
+    "name": "오재일",
+    "team": "삼성",
+    "average": "0.285"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "23",
+    "name": "김현수",
+    "team": "LG",
+    "average": "0.285"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "24",
+    "name": "정은원",
+    "team": "한화",
+    "average": "0.283"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "25",
+    "name": "나성범",
+    "team": "NC",
+    "average": "0.281"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "26",
+    "name": "마차도",
+    "team": "롯데",
+    "average": "0.279"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "27",
+    "name": "한유섬",
+    "team": "SSG",
+    "average": "0.278"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "28",
+    "name": "허경민",
+    "team": "두산",
+    "average": "0.278"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "29",
+    "name": "최정",
+    "team": "SSG",
+    "average": "0.278"
+  },
+  {
+    "year": 2021,
+    "type": "타자",
+    "rank": "30",
+    "name": "채은성",
+    "team": "LG",
+    "average": "0.276"
+  },
+  {
+    "year": 2021,
+    "type": "투수",
+    "rank": "1",
+    "name": "미란다",
+    "team": "두산",
+    "era": "2.33"
+  },
+  {
+    "year": 2021,
+    "type": "투수",
+    "rank": "2",
+    "name": "백정현",
+    "team": "삼성",
+    "era": "2.63"
+  },
+  {
+    "year": 2021,
+    "type": "투수",
+    "rank": "3",
+    "name": "고영표",
+    "team": "KT",
+    "era": "2.92"
+  },
+  {
+    "year": 2021,
+    "type": "투수",
+    "rank": "4",
+    "name": "요키시",
+    "team": "키움",
+    "era": "2.93"
+  },
+  {
+    "year": 2021,
+    "type": "투수",
+    "rank": "5",
+    "name": "원태인",
+    "team": "삼성",
+    "era": "3.06"
+  },
+  {
+    "year": 2021,
+    "type": "투수",
+    "rank": "6",
+    "name": "뷰캐넌",
+    "team": "삼성",
+    "era": "3.10"
+  },
+  {
+    "year": 2021,
+    "type": "투수",
+    "rank": "7",
+    "name": "켈리",
+    "team": "LG",
+    "era": "3.15"
+  },
+  {
+    "year": 2021,
+    "type": "투수",
+    "rank": "8",
+    "name": "루친스키",
+    "team": "NC",
+    "era": "3.17"
+  },
+  {
+    "year": 2021,
+    "type": "투수",
+    "rank": "9",
+    "name": "킹험",
+    "team": "한화",
+    "era": "3.19"
+  },
+  {
+    "year": 2021,
+    "type": "투수",
+    "rank": "10",
+    "name": "최원준",
+    "team": "두산",
+    "era": "3.30"
+  },
+  {
+    "year": 2021,
+    "type": "투수",
+    "rank": "11",
+    "name": "데스파이네",
+    "team": "KT",
+    "era": "3.39"
+  },
+  {
+    "year": 2021,
+    "type": "투수",
+    "rank": "12",
+    "name": "폰트",
+    "team": "SSG",
+    "era": "3.46"
+  },
+  {
+    "year": 2021,
+    "type": "투수",
+    "rank": "13",
+    "name": "카펜터",
+    "team": "한화",
+    "era": "3.97"
+  },
+  {
+    "year": 2021,
+    "type": "투수",
+    "rank": "14",
+    "name": "박세웅",
+    "team": "롯데",
+    "era": "3.98"
+  },
+  {
+    "year": 2021,
+    "type": "투수",
+    "rank": "15",
+    "name": "김민우",
+    "team": "한화",
+    "era": "4.00"
+  },
+  {
+    "year": 2021,
+    "type": "투수",
+    "rank": "16",
+    "name": "스트레일리",
+    "team": "롯데",
+    "era": "4.07"
+  },
+  {
+    "year": 2021,
+    "type": "투수",
+    "rank": "17",
+    "name": "신민혁",
+    "team": "NC",
+    "era": "4.41"
+  },
+  {
+    "year": 2021,
+    "type": "투수",
+    "rank": "18",
+    "name": "임기영",
+    "team": "KIA",
+    "era": "4.88"
+  },
+  {
+    "year": 2021,
+    "type": "투수",
+    "rank": "19",
+    "name": "프랑코",
+    "team": "롯데",
+    "era": "5.40"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "1",
+    "name": "이정후",
+    "team": "키움",
+    "average": "0.349"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "2",
+    "name": "피렐라",
+    "team": "삼성",
+    "average": "0.342"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "3",
+    "name": "박건우",
+    "team": "NC",
+    "average": "0.336"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "4",
+    "name": "이대호",
+    "team": "롯데",
+    "average": "0.331"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "5",
+    "name": "나성범",
+    "team": "KIA",
+    "average": "0.320"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "6",
+    "name": "김혜성",
+    "team": "키움",
+    "average": "0.318"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "7",
+    "name": "문보경",
+    "team": "LG",
+    "average": "0.315"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "8",
+    "name": "소크라테스",
+    "team": "KIA",
+    "average": "0.311"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "9",
+    "name": "페르난데스",
+    "team": "두산",
+    "average": "0.309"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "10",
+    "name": "조용호",
+    "team": "KT",
+    "average": "0.308"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "11",
+    "name": "한동희",
+    "team": "롯데",
+    "average": "0.307"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "12",
+    "name": "전준우",
+    "team": "롯데",
+    "average": "0.304"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "13",
+    "name": "최지훈",
+    "team": "SSG",
+    "average": "0.304"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "14",
+    "name": "박성한",
+    "team": "SSG",
+    "average": "0.298"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "15",
+    "name": "마티니",
+    "team": "NC",
+    "average": "0.296"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "16",
+    "name": "채은성",
+    "team": "LG",
+    "average": "0.296"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "17",
+    "name": "박해민",
+    "team": "LG",
+    "average": "0.289"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "18",
+    "name": "허경민",
+    "team": "두산",
+    "average": "0.289"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "19",
+    "name": "터크먼",
+    "team": "한화",
+    "average": "0.289"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "20",
+    "name": "김선빈",
+    "team": "KIA",
+    "average": "0.287"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "21",
+    "name": "김현수",
+    "team": "LG",
+    "average": "0.286"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "22",
+    "name": "홍창기",
+    "team": "LG",
+    "average": "0.286"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "23",
+    "name": "안치홍",
+    "team": "롯데",
+    "average": "0.284"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "24",
+    "name": "양의지",
+    "team": "NC",
+    "average": "0.283"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "25",
+    "name": "노시환",
+    "team": "한화",
+    "average": "0.281"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "26",
+    "name": "노진혁",
+    "team": "NC",
+    "average": "0.280"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "27",
+    "name": "손아섭",
+    "team": "NC",
+    "average": "0.277"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "28",
+    "name": "푸이그",
+    "team": "키움",
+    "average": "0.277"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "29",
+    "name": "박병호",
+    "team": "KT",
+    "average": "0.275"
+  },
+  {
+    "year": 2022,
+    "type": "타자",
+    "rank": "30",
+    "name": "류지혁",
+    "team": "KIA",
+    "average": "0.274"
+  },
+  {
+    "year": 2022,
+    "type": "투수",
+    "rank": "1",
+    "name": "안우진",
+    "team": "키움",
+    "era": "2.11"
+  },
+  {
+    "year": 2022,
+    "type": "투수",
+    "rank": "2",
+    "name": "김광현",
+    "team": "SSG",
+    "era": "2.13"
+  },
+  {
+    "year": 2022,
+    "type": "투수",
+    "rank": "3",
+    "name": "플럿코",
+    "team": "LG",
+    "era": "2.39"
+  },
+  {
+    "year": 2022,
+    "type": "투수",
+    "rank": "4",
+    "name": "수아레즈",
+    "team": "삼성",
+    "era": "2.49"
+  },
+  {
+    "year": 2022,
+    "type": "투수",
+    "rank": "5",
+    "name": "켈리",
+    "team": "LG",
+    "era": "2.54"
+  },
+  {
+    "year": 2022,
+    "type": "투수",
+    "rank": "6",
+    "name": "요키시",
+    "team": "키움",
+    "era": "2.57"
+  },
+  {
+    "year": 2022,
+    "type": "투수",
+    "rank": "7",
+    "name": "폰트",
+    "team": "SSG",
+    "era": "2.69"
+  },
+  {
+    "year": 2022,
+    "type": "투수",
+    "rank": "8",
+    "name": "루친스키",
+    "team": "NC",
+    "era": "2.97"
+  },
+  {
+    "year": 2022,
+    "type": "투수",
+    "rank": "9",
+    "name": "뷰캐넌",
+    "team": "삼성",
+    "era": "3.04"
+  },
+  {
+    "year": 2022,
+    "type": "투수",
+    "rank": "10",
+    "name": "소형준",
+    "team": "KT",
+    "era": "3.05"
+  },
+  {
+    "year": 2022,
+    "type": "투수",
+    "rank": "11",
+    "name": "고영표",
+    "team": "KT",
+    "era": "3.26"
+  },
+  {
+    "year": 2022,
+    "type": "투수",
+    "rank": "12",
+    "name": "스탁",
+    "team": "두산",
+    "era": "3.60"
+  },
+  {
+    "year": 2022,
+    "type": "투수",
+    "rank": "12",
+    "name": "최원준",
+    "team": "두산",
+    "era": "3.60"
+  },
+  {
+    "year": 2022,
+    "type": "투수",
+    "rank": "14",
+    "name": "반즈",
+    "team": "롯데",
+    "era": "3.62"
+  },
+  {
+    "year": 2022,
+    "type": "투수",
+    "rank": "15",
+    "name": "곽빈",
+    "team": "두산",
+    "era": "3.78"
+  },
+  {
+    "year": 2022,
+    "type": "투수",
+    "rank": "16",
+    "name": "양현종",
+    "team": "KIA",
+    "era": "3.85"
+  },
+  {
+    "year": 2022,
+    "type": "투수",
+    "rank": "17",
+    "name": "이의리",
+    "team": "KIA",
+    "era": "3.86"
+  },
+  {
+    "year": 2022,
+    "type": "투수",
+    "rank": "18",
+    "name": "박세웅",
+    "team": "롯데",
+    "era": "3.89"
+  },
+  {
+    "year": 2022,
+    "type": "투수",
+    "rank": "19",
+    "name": "원태인",
+    "team": "삼성",
+    "era": "3.92"
+  },
+  {
+    "year": 2022,
+    "type": "투수",
+    "rank": "20",
+    "name": "김민우",
+    "team": "한화",
+    "era": "4.36"
+  },
+  {
+    "year": 2022,
+    "type": "투수",
+    "rank": "21",
+    "name": "오원석",
+    "team": "SSG",
+    "era": "4.50"
+  },
+  {
+    "year": 2022,
+    "type": "투수",
+    "rank": "22",
+    "name": "데스파이네",
+    "team": "KT",
+    "era": "4.53"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "1",
+    "name": "손아섭",
+    "team": "NC",
+    "average": "0.339"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "2",
+    "name": "구자욱",
+    "team": "삼성",
+    "average": "0.336"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "3",
+    "name": "김혜성",
+    "team": "키움",
+    "average": "0.335"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "4",
+    "name": "홍창기",
+    "team": "LG",
+    "average": "0.332"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "5",
+    "name": "에레디아",
+    "team": "SSG",
+    "average": "0.323"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "6",
+    "name": "김선빈",
+    "team": "KIA",
+    "average": "0.320"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "7",
+    "name": "박건우",
+    "team": "NC",
+    "average": "0.319"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "8",
+    "name": "박민우",
+    "team": "NC",
+    "average": "0.316"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "9",
+    "name": "오스틴",
+    "team": "LG",
+    "average": "0.313"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "10",
+    "name": "전준우",
+    "team": "롯데",
+    "average": "0.312"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "11",
+    "name": "양의지",
+    "team": "두산",
+    "average": "0.305"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "12",
+    "name": "최형우",
+    "team": "KIA",
+    "average": "0.302"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "13",
+    "name": "박찬호",
+    "team": "KIA",
+    "average": "0.301"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "14",
+    "name": "문보경",
+    "team": "LG",
+    "average": "0.301"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "15",
+    "name": "노시환",
+    "team": "한화",
+    "average": "0.298"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "16",
+    "name": "최정",
+    "team": "SSG",
+    "average": "0.297"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "17",
+    "name": "김민혁",
+    "team": "KT",
+    "average": "0.297"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "18",
+    "name": "황재균",
+    "team": "KT",
+    "average": "0.295"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "19",
+    "name": "문성주",
+    "team": "LG",
+    "average": "0.294"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "20",
+    "name": "김현수",
+    "team": "LG",
+    "average": "0.293"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "21",
+    "name": "안치홍",
+    "team": "롯데",
+    "average": "0.292"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "22",
+    "name": "강민호",
+    "team": "삼성",
+    "average": "0.290"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "23",
+    "name": "알포드",
+    "team": "KT",
+    "average": "0.289"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "24",
+    "name": "장성우",
+    "team": "KT",
+    "average": "0.288"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "25",
+    "name": "정수빈",
+    "team": "두산",
+    "average": "0.287"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "26",
+    "name": "피렐라",
+    "team": "삼성",
+    "average": "0.285"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "27",
+    "name": "소크라테스",
+    "team": "KIA",
+    "average": "0.285"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "28",
+    "name": "박해민",
+    "team": "LG",
+    "average": "0.285"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "29",
+    "name": "박병호",
+    "team": "KT",
+    "average": "0.283"
+  },
+  {
+    "year": 2023,
+    "type": "타자",
+    "rank": "30",
+    "name": "마틴",
+    "team": "NC",
+    "average": "0.283"
+  },
+  {
+    "year": 2023,
+    "type": "투수",
+    "rank": "1",
+    "name": "페디",
+    "team": "NC",
+    "era": "2.00"
+  },
+  {
+    "year": 2023,
+    "type": "투수",
+    "rank": "2",
+    "name": "안우진",
+    "team": "키움",
+    "era": "2.39"
+  },
+  {
+    "year": 2023,
+    "type": "투수",
+    "rank": "3",
+    "name": "뷰캐넌",
+    "team": "삼성",
+    "era": "2.54"
+  },
+  {
+    "year": 2023,
+    "type": "투수",
+    "rank": "4",
+    "name": "후라도",
+    "team": "키움",
+    "era": "2.65"
+  },
+  {
+    "year": 2023,
+    "type": "투수",
+    "rank": "5",
+    "name": "알칸타라",
+    "team": "두산",
+    "era": "2.67"
+  },
+  {
+    "year": 2023,
+    "type": "투수",
+    "rank": "6",
+    "name": "고영표",
+    "team": "KT",
+    "era": "2.78"
+  },
+  {
+    "year": 2023,
+    "type": "투수",
+    "rank": "7",
+    "name": "원태인",
+    "team": "삼성",
+    "era": "3.24"
+  },
+  {
+    "year": 2023,
+    "type": "투수",
+    "rank": "8",
+    "name": "반즈",
+    "team": "롯데",
+    "era": "3.28"
+  },
+  {
+    "year": 2023,
+    "type": "투수",
+    "rank": "9",
+    "name": "임찬규",
+    "team": "LG",
+    "era": "3.42"
+  },
+  {
+    "year": 2023,
+    "type": "투수",
+    "rank": "10",
+    "name": "박세웅",
+    "team": "롯데",
+    "era": "3.45"
+  },
+  {
+    "year": 2023,
+    "type": "투수",
+    "rank": "11",
+    "name": "김광현",
+    "team": "SSG",
+    "era": "3.53"
+  },
+  {
+    "year": 2023,
+    "type": "투수",
+    "rank": "12",
+    "name": "벤자민",
+    "team": "KT",
+    "era": "3.54"
+  },
+  {
+    "year": 2023,
+    "type": "투수",
+    "rank": "13",
+    "name": "양현종",
+    "team": "KIA",
+    "era": "3.58"
+  },
+  {
+    "year": 2023,
+    "type": "투수",
+    "rank": "14",
+    "name": "페냐",
+    "team": "한화",
+    "era": "3.60"
+  },
+  {
+    "year": 2023,
+    "type": "투수",
+    "rank": "15",
+    "name": "켈리",
+    "team": "LG",
+    "era": "3.83"
+  },
+  {
+    "year": 2023,
+    "type": "투수",
+    "rank": "16",
+    "name": "최원태",
+    "team": "LG",
+    "era": "4.30"
+  },
+  {
+    "year": 2023,
+    "type": "투수",
+    "rank": "17",
+    "name": "오원석",
+    "team": "SSG",
+    "era": "5.23"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "1",
+    "name": "에레디아",
+    "team": "SSG",
+    "average": "0.360"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "2",
+    "name": "레이예스",
+    "team": "롯데",
+    "average": "0.352"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "3",
+    "name": "김도영",
+    "team": "KIA",
+    "average": "0.347"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "4",
+    "name": "구자욱",
+    "team": "삼성",
+    "average": "0.343"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "5",
+    "name": "송성문",
+    "team": "키움",
+    "average": "0.340"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "6",
+    "name": "홍창기",
+    "team": "LG",
+    "average": "0.336"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "7",
+    "name": "로하스",
+    "team": "KT",
+    "average": "0.329"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "8",
+    "name": "김선빈",
+    "team": "KIA",
+    "average": "0.329"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "9",
+    "name": "박민우",
+    "team": "NC",
+    "average": "0.328"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "10",
+    "name": "김혜성",
+    "team": "키움",
+    "average": "0.326"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "11",
+    "name": "오스틴",
+    "team": "LG",
+    "average": "0.319"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "12",
+    "name": "김지찬",
+    "team": "삼성",
+    "average": "0.316"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "13",
+    "name": "양의지",
+    "team": "두산",
+    "average": "0.314"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "14",
+    "name": "나승엽",
+    "team": "롯데",
+    "average": "0.312"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "15",
+    "name": "소크라테스",
+    "team": "KIA",
+    "average": "0.310"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "16",
+    "name": "허경민",
+    "team": "두산",
+    "average": "0.309"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "17",
+    "name": "고승민",
+    "team": "롯데",
+    "average": "0.308"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "18",
+    "name": "박찬호",
+    "team": "KIA",
+    "average": "0.307"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "19",
+    "name": "데이비슨",
+    "team": "NC",
+    "average": "0.306"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "20",
+    "name": "강민호",
+    "team": "삼성",
+    "average": "0.303"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "21",
+    "name": "박성한",
+    "team": "SSG",
+    "average": "0.301"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "22",
+    "name": "문보경",
+    "team": "LG",
+    "average": "0.301"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "23",
+    "name": "권희동",
+    "team": "NC",
+    "average": "0.300"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "24",
+    "name": "안치홍",
+    "team": "한화",
+    "average": "0.300"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "25",
+    "name": "신민재",
+    "team": "LG",
+    "average": "0.297"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "26",
+    "name": "김현수",
+    "team": "LG",
+    "average": "0.294"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "27",
+    "name": "윤동희",
+    "team": "롯데",
+    "average": "0.293"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "28",
+    "name": "전준우",
+    "team": "롯데",
+    "average": "0.293"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "29",
+    "name": "최원준",
+    "team": "KIA",
+    "average": "0.292"
+  },
+  {
+    "year": 2024,
+    "type": "타자",
+    "rank": "30",
+    "name": "최정",
+    "team": "SSG",
+    "average": "0.291"
+  },
+  {
+    "year": 2024,
+    "type": "투수",
+    "rank": "1",
+    "name": "네일",
+    "team": "KIA",
+    "era": "2.53"
+  },
+  {
+    "year": 2024,
+    "type": "투수",
+    "rank": "2",
+    "name": "하트",
+    "team": "NC",
+    "era": "2.69"
+  },
+  {
+    "year": 2024,
+    "type": "투수",
+    "rank": "3",
+    "name": "반즈",
+    "team": "롯데",
+    "era": "3.35"
+  },
+  {
+    "year": 2024,
+    "type": "투수",
+    "rank": "4",
+    "name": "후라도",
+    "team": "키움",
+    "era": "3.36"
+  },
+  {
+    "year": 2024,
+    "type": "투수",
+    "rank": "5",
+    "name": "코너",
+    "team": "삼성",
+    "era": "3.43"
+  },
+  {
+    "year": 2024,
+    "type": "투수",
+    "rank": "6",
+    "name": "원태인",
+    "team": "삼성",
+    "era": "3.66"
+  },
+  {
+    "year": 2024,
+    "type": "투수",
+    "rank": "7",
+    "name": "헤이수스",
+    "team": "키움",
+    "era": "3.68"
+  },
+  {
+    "year": 2024,
+    "type": "투수",
+    "rank": "8",
+    "name": "손주영",
+    "team": "LG",
+    "era": "3.79"
+  },
+  {
+    "year": 2024,
+    "type": "투수",
+    "rank": "9",
+    "name": "레예스",
+    "team": "삼성",
+    "era": "3.81"
+  },
+  {
+    "year": 2024,
+    "type": "투수",
+    "rank": "10",
+    "name": "윌커슨",
+    "team": "롯데",
+    "era": "3.84"
+  },
+  {
+    "year": 2024,
+    "type": "투수",
+    "rank": "11",
+    "name": "류현진",
+    "team": "한화",
+    "era": "3.87"
+  },
+  {
+    "year": 2024,
+    "type": "투수",
+    "rank": "12",
+    "name": "양현종",
+    "team": "KIA",
+    "era": "4.10"
+  },
+  {
+    "year": 2024,
+    "type": "투수",
+    "rank": "13",
+    "name": "쿠에바스",
+    "team": "KT",
+    "era": "4.10"
+  },
+  {
+    "year": 2024,
+    "type": "투수",
+    "rank": "14",
+    "name": "엔스",
+    "team": "LG",
+    "era": "4.19"
+  },
+  {
+    "year": 2024,
+    "type": "투수",
+    "rank": "15",
+    "name": "곽빈",
+    "team": "두산",
+    "era": "4.24"
+  },
+  {
+    "year": 2024,
+    "type": "투수",
+    "rank": "16",
+    "name": "하영민",
+    "team": "키움",
+    "era": "4.37"
+  },
+  {
+    "year": 2024,
+    "type": "투수",
+    "rank": "17",
+    "name": "벤자민",
+    "team": "KT",
+    "era": "4.63"
+  },
+  {
+    "year": 2024,
+    "type": "투수",
+    "rank": "18",
+    "name": "박세웅",
+    "team": "롯데",
+    "era": "4.78"
+  },
+  {
+    "year": 2024,
+    "type": "투수",
+    "rank": "19",
+    "name": "엄상백",
+    "team": "KT",
+    "era": "4.88"
+  },
+  {
+    "year": 2024,
+    "type": "투수",
+    "rank": "20",
+    "name": "김광현",
+    "team": "SSG",
+    "era": "4.93"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "1",
+    "name": "양의지",
+    "team": "두산",
+    "average": "0.337"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "2",
+    "name": "안현민",
+    "team": "KT",
+    "average": "0.334"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "3",
+    "name": "김성윤",
+    "team": "삼성",
+    "average": "0.331"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "4",
+    "name": "레이예스",
+    "team": "롯데",
+    "average": "0.326"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "5",
+    "name": "문현빈",
+    "team": "한화",
+    "average": "0.320"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "6",
+    "name": "구자욱",
+    "team": "삼성",
+    "average": "0.319"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "7",
+    "name": "송성문",
+    "team": "키움",
+    "average": "0.315"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "8",
+    "name": "디아즈",
+    "team": "삼성",
+    "average": "0.314"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "9",
+    "name": "신민재",
+    "team": "LG",
+    "average": "0.313"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "10",
+    "name": "오스틴",
+    "team": "LG",
+    "average": "0.313"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "11",
+    "name": "최형우",
+    "team": "KIA",
+    "average": "0.307"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "12",
+    "name": "문성주",
+    "team": "LG",
+    "average": "0.305"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "13",
+    "name": "박민우",
+    "team": "NC",
+    "average": "0.302"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "14",
+    "name": "케이브",
+    "team": "두산",
+    "average": "0.299"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "15",
+    "name": "김현수",
+    "team": "LG",
+    "average": "0.298"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "16",
+    "name": "전준우",
+    "team": "롯데",
+    "average": "0.293"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "17",
+    "name": "김주원",
+    "team": "NC",
+    "average": "0.289"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "18",
+    "name": "채은성",
+    "team": "한화",
+    "average": "0.288"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "19",
+    "name": "박찬호",
+    "team": "KIA",
+    "average": "0.287"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "20",
+    "name": "최지훈",
+    "team": "SSG",
+    "average": "0.284"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "21",
+    "name": "허경민",
+    "team": "KT",
+    "average": "0.283"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "22",
+    "name": "류지혁",
+    "team": "삼성",
+    "average": "0.280"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "23",
+    "name": "고명준",
+    "team": "SSG",
+    "average": "0.278"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "24",
+    "name": "박해민",
+    "team": "LG",
+    "average": "0.276"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "25",
+    "name": "문보경",
+    "team": "LG",
+    "average": "0.276"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "26",
+    "name": "최주환",
+    "team": "키움",
+    "average": "0.275"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "27",
+    "name": "박성한",
+    "team": "SSG",
+    "average": "0.274"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "28",
+    "name": "한유섬",
+    "team": "SSG",
+    "average": "0.273"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "29",
+    "name": "고승민",
+    "team": "롯데",
+    "average": "0.271"
+  },
+  {
+    "year": 2025,
+    "type": "타자",
+    "rank": "30",
+    "name": "강민호",
+    "team": "삼성",
+    "average": "0.269"
+  },
+  {
+    "year": 2025,
+    "type": "투수",
+    "rank": "1",
+    "name": "폰세",
+    "team": "한화",
+    "era": "1.89"
+  },
+  {
+    "year": 2025,
+    "type": "투수",
+    "rank": "2",
+    "name": "네일",
+    "team": "KIA",
+    "era": "2.25"
+  },
+  {
+    "year": 2025,
+    "type": "투수",
+    "rank": "3",
+    "name": "앤더슨",
+    "team": "SSG",
+    "era": "2.25"
+  },
+  {
+    "year": 2025,
+    "type": "투수",
+    "rank": "4",
+    "name": "후라도",
+    "team": "삼성",
+    "era": "2.60"
+  },
+  {
+    "year": 2025,
+    "type": "투수",
+    "rank": "5",
+    "name": "잭로그",
+    "team": "두산",
+    "era": "2.81"
+  },
+  {
+    "year": 2025,
+    "type": "투수",
+    "rank": "6",
+    "name": "와이스",
+    "team": "한화",
+    "era": "2.87"
+  },
+  {
+    "year": 2025,
+    "type": "투수",
+    "rank": "7",
+    "name": "임찬규",
+    "team": "LG",
+    "era": "3.03"
+  },
+  {
+    "year": 2025,
+    "type": "투수",
+    "rank": "8",
+    "name": "원태인",
+    "team": "삼성",
+    "era": "3.24"
+  },
+  {
+    "year": 2025,
+    "type": "투수",
+    "rank": "9",
+    "name": "고영표",
+    "team": "KT",
+    "era": "3.30"
+  },
+  {
+    "year": 2025,
+    "type": "투수",
+    "rank": "10",
+    "name": "소형준",
+    "team": "KT",
+    "era": "3.30"
+  },
+  {
+    "year": 2025,
+    "type": "투수",
+    "rank": "11",
+    "name": "치리노스",
+    "team": "LG",
+    "era": "3.31"
+  },
+  {
+    "year": 2025,
+    "type": "투수",
+    "rank": "12",
+    "name": "손주영",
+    "team": "LG",
+    "era": "3.41"
+  },
+  {
+    "year": 2025,
+    "type": "투수",
+    "rank": "13",
+    "name": "라일리",
+    "team": "NC",
+    "era": "3.45"
+  },
+  {
+    "year": 2025,
+    "type": "투수",
+    "rank": "14",
+    "name": "송승기",
+    "team": "LG",
+    "era": "3.50"
+  },
+  {
+    "year": 2025,
+    "type": "투수",
+    "rank": "15",
+    "name": "올러",
+    "team": "KIA",
+    "era": "3.62"
+  },
+  {
+    "year": 2025,
+    "type": "투수",
+    "rank": "16",
+    "name": "헤이수스",
+    "team": "KT",
+    "era": "3.96"
+  },
+  {
+    "year": 2025,
+    "type": "투수",
+    "rank": "17",
+    "name": "콜어빈",
+    "team": "두산",
+    "era": "4.48"
+  },
+  {
+    "year": 2025,
+    "type": "투수",
+    "rank": "18",
+    "name": "로건",
+    "team": "NC",
+    "era": "4.53"
+  },
+  {
+    "year": 2025,
+    "type": "투수",
+    "rank": "19",
+    "name": "박세웅",
+    "team": "롯데",
+    "era": "4.93"
+  },
+  {
+    "year": 2025,
+    "type": "투수",
+    "rank": "20",
+    "name": "하영민",
+    "team": "키움",
+    "era": "4.99"
+  },
+  {
+    "year": 2025,
+    "type": "투수",
+    "rank": "21",
+    "name": "김광현",
+    "team": "SSG",
+    "era": "5.00"
+  },
+  {
+    "year": 2025,
+    "type": "투수",
+    "rank": "22",
+    "name": "양현종",
+    "team": "KIA",
+    "era": "5.06"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "1",
+    "name": "최원준",
+    "team": "KT",
+    "average": "0.363"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "2",
+    "name": "레이예스",
+    "team": "롯데",
+    "average": "0.348"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "3",
+    "name": "오스틴",
+    "team": "LG",
+    "average": "0.339"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "4",
+    "name": "구자욱",
+    "team": "삼성",
+    "average": "0.339"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "5",
+    "name": "박민우",
+    "team": "NC",
+    "average": "0.337"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "6",
+    "name": "박성한",
+    "team": "SSG",
+    "average": "0.333"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "7",
+    "name": "이우성",
+    "team": "NC",
+    "average": "0.332"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "8",
+    "name": "최형우",
+    "team": "삼성",
+    "average": "0.329"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "9",
+    "name": "페라자",
+    "team": "한화",
+    "average": "0.314"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "10",
+    "name": "강백호",
+    "team": "한화",
+    "average": "0.313"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "11",
+    "name": "김지찬",
+    "team": "삼성",
+    "average": "0.312"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "12",
+    "name": "최정",
+    "team": "SSG",
+    "average": "0.307"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "13",
+    "name": "김주원",
+    "team": "NC",
+    "average": "0.306"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "14",
+    "name": "김민석",
+    "team": "두산",
+    "average": "0.306"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "15",
+    "name": "김도영",
+    "team": "KIA",
+    "average": "0.298"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "16",
+    "name": "디아즈",
+    "team": "삼성",
+    "average": "0.295"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "17",
+    "name": "나성범",
+    "team": "KIA",
+    "average": "0.295"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "18",
+    "name": "김현수",
+    "team": "KT",
+    "average": "0.293"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "19",
+    "name": "류지혁",
+    "team": "삼성",
+    "average": "0.292"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "20",
+    "name": "힐리어드",
+    "team": "KT",
+    "average": "0.291"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "21",
+    "name": "박해민",
+    "team": "LG",
+    "average": "0.291"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "22",
+    "name": "황성빈",
+    "team": "롯데",
+    "average": "0.289"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "23",
+    "name": "문현빈",
+    "team": "한화",
+    "average": "0.288"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "24",
+    "name": "박건우",
+    "team": "NC",
+    "average": "0.287"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "25",
+    "name": "카메론",
+    "team": "두산",
+    "average": "0.287"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "26",
+    "name": "김상수",
+    "team": "KT",
+    "average": "0.285"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "27",
+    "name": "데이비슨",
+    "team": "키움",
+    "average": "0.284"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "28",
+    "name": "박재현",
+    "team": "KIA",
+    "average": "0.283"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "29",
+    "name": "에레디아",
+    "team": "SSG",
+    "average": "0.282"
+  },
+  {
+    "year": 2026,
+    "type": "타자",
+    "rank": "30",
+    "name": "박찬호",
+    "team": "두산",
+    "average": "0.281"
+  },
+  {
+    "year": 2026,
+    "type": "투수",
+    "rank": "1",
+    "name": "최민석",
+    "team": "두산",
+    "era": "2.33"
+  },
+  {
+    "year": 2026,
+    "type": "투수",
+    "rank": "2",
+    "name": "올러",
+    "team": "KIA",
+    "era": "2.36"
+  },
+  {
+    "year": 2026,
+    "type": "투수",
+    "rank": "3",
+    "name": "곽빈",
+    "team": "두산",
+    "era": "2.60"
+  },
+  {
+    "year": 2026,
+    "type": "투수",
+    "rank": "4",
+    "name": "류현진",
+    "team": "한화",
+    "era": "2.67"
+  },
+  {
+    "year": 2026,
+    "type": "투수",
+    "rank": "5",
+    "name": "김진욱",
+    "team": "롯데",
+    "era": "2.95"
+  },
+  {
+    "year": 2026,
+    "type": "투수",
+    "rank": "6",
+    "name": "후라도",
+    "team": "삼성",
+    "era": "3.11"
+  },
+  {
+    "year": 2026,
+    "type": "투수",
+    "rank": "7",
+    "name": "알칸타라",
+    "team": "키움",
+    "era": "3.32"
+  },
+  {
+    "year": 2026,
+    "type": "투수",
+    "rank": "8",
+    "name": "구창모",
+    "team": "NC",
+    "era": "3.35"
+  },
+  {
+    "year": 2026,
+    "type": "투수",
+    "rank": "9",
+    "name": "왕옌청",
+    "team": "한화",
+    "era": "3.59"
+  },
+  {
+    "year": 2026,
+    "type": "투수",
+    "rank": "10",
+    "name": "네일",
+    "team": "KIA",
+    "era": "3.77"
+  },
+  {
+    "year": 2026,
+    "type": "투수",
+    "rank": "11",
+    "name": "임찬규",
+    "team": "LG",
+    "era": "3.78"
+  },
+  {
+    "year": 2026,
+    "type": "투수",
+    "rank": "12",
+    "name": "나균안",
+    "team": "롯데",
+    "era": "3.90"
+  },
+  {
+    "year": 2026,
+    "type": "투수",
+    "rank": "12",
+    "name": "잭로그",
+    "team": "두산",
+    "era": "3.90"
+  },
+  {
+    "year": 2026,
+    "type": "투수",
+    "rank": "14",
+    "name": "톨허스트",
+    "team": "LG",
+    "era": "4.09"
+  },
+  {
+    "year": 2026,
+    "type": "투수",
+    "rank": "15",
+    "name": "테일러",
+    "team": "NC",
+    "era": "4.26"
+  },
+  {
+    "year": 2026,
+    "type": "투수",
+    "rank": "16",
+    "name": "로드리게스",
+    "team": "롯데",
+    "era": "4.26"
+  },
+  {
+    "year": 2026,
+    "type": "투수",
+    "rank": "17",
+    "name": "사우어",
+    "team": "KT",
+    "era": "4.39"
+  },
+  {
+    "year": 2026,
+    "type": "투수",
+    "rank": "18",
+    "name": "고영표",
+    "team": "KT",
+    "era": "4.43"
+  },
+  {
+    "year": 2026,
+    "type": "투수",
+    "rank": "19",
+    "name": "박세웅",
+    "team": "롯데",
+    "era": "4.58"
+  },
+  {
+    "year": 2026,
+    "type": "투수",
+    "rank": "20",
+    "name": "토다",
+    "team": "NC",
+    "era": "4.81"
+  }
+]

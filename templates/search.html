@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{{ keyword }} 검색 결과 | KBO Search</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+
+    <style>
+      :root {
+        --navy: #10233f;
+        --blue: #174ea6;
+        --light-blue: #eaf1ff;
+        --background: #f3f6fb;
+        --line: #dfe5ef;
+        --muted: #6d788b;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--background);
+        color: #182234;
+      }
+
+      .topbar {
+        background: var(--navy);
+      }
+
+      .topbar-inner {
+        width: min(1200px, calc(100% - 32px));
+        min-height: 74px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .brand {
+        color: white;
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: 800;
+      }
+
+      .top-search {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 90px;
+        width: min(480px, 100%);
+        margin: 0;
+        gap: 8px;
+      }
+
+      .top-search input,
+      .top-search button {
+        height: 45px;
+        margin: 0;
+      }
+
+      .top-search input {
+        background: white;
+      }
+
+      .top-search button {
+        width: 90px;
+        min-width: 90px;
+        height: 45px;
+        padding: 0 18px;
+        margin: 0;
+        border: 0;
+        border-radius: 10px;
+        background: #3972d5;
+
+        white-space: nowrap;
+        word-break: keep-all;
+      }
+
+      .page {
+        width: min(1200px, calc(100% - 32px));
+        margin: 40px auto 80px;
+      }
+
+      .result-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 24px;
+      }
+
+      .eyebrow {
+        margin: 0 0 8px;
+        color: var(--blue);
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      h1 {
+        margin: 0;
+        color: var(--navy);
+        font-size: clamp(36px, 5vw, 58px);
+        letter-spacing: -2px;
+      }
+
+      .result-count {
+        margin: 10px 0 0;
+        color: var(--muted);
+        font-size: 17px;
+      }
+
+      .download-button {
+        border-radius: 13px;
+        background: var(--blue);
+        white-space: nowrap;
+      }
+
+      .section-card {
+        margin-top: 28px;
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        background: white;
+        box-shadow: 0 12px 35px rgba(28, 49, 83, 0.07);
+      }
+
+      .section-title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 22px;
+      }
+
+      .section-title h2 {
+        margin: 0;
+        color: var(--navy);
+        font-size: 25px;
+      }
+
+      .section-label {
+        padding: 6px 11px;
+        border-radius: 999px;
+        background: var(--light-blue);
+        color: var(--blue);
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .player-summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 22px;
+        margin-bottom: 22px;
+        padding: 22px;
+        border-radius: 17px;
+        background: linear-gradient(135deg, #10233f, #174ea6);
+        color: white;
+      }
+
+      .player-summary h3 {
+        margin: 0 0 8px;
+        color: white;
+        font-size: 30px;
+      }
+
+      .player-meta {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.78);
+      }
+
+      .detail-link {
+        padding: 10px 15px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 11px;
+        color: white;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .record-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+        gap: 12px;
+      }
+
+      .record-item {
+        padding: 18px 14px;
+        border: 1px solid var(--line);
+        border-radius: 15px;
+        background: #fafbfd;
+        text-align: center;
+      }
+
+      .record-label {
+        display: block;
+        margin-bottom: 7px;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .record-value {
+        color: var(--navy);
+        font-size: 23px;
+        font-weight: 800;
+      }
+
+      .empty-state {
+        padding: 48px 20px;
+        border: 1px dashed #cbd4e2;
+        border-radius: 15px;
+        background: #fafbfd;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .news-grid {
+        display: grid;
+        gap: 14px;
+      }
+
+      .news-item {
+        padding: 20px;
+        border: 1px solid var(--line);
+        border-radius: 15px;
+        transition:
+          transform 0.15s ease,
+          box-shadow 0.15s ease;
+      }
+
+      .news-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(28, 49, 83, 0.09);
+      }
+
+      .news-number {
+        display: inline-block;
+        margin-right: 9px;
+        color: var(--blue);
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .news-title {
+        color: var(--navy);
+        font-size: 17px;
+        font-weight: 750;
+        text-decoration: none;
+      }
+
+      .news-title:hover {
+        color: var(--blue);
+      }
+
+      .news-info {
+        margin: 9px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.65;
+      }
+
+      @media (max-width: 760px) {
+        .topbar-inner {
+          padding: 15px 0;
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .brand {
+          text-align: center;
+        }
+
+        .result-header {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .download-button {
+          width: 100%;
+        }
+
+        .section-card {
+          padding: 21px 16px;
+        }
+
+        .player-summary {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a href="/" class="brand"> KBO Search </a>
+
+        <form action="/search" method="get" class="top-search">
+          <input
+            type="text"
+            name="keyword"
+            value="{{ keyword }}"
+            placeholder="선수 이름 검색"
+            required
+          />
+
+          <button type="submit">검색</button>
+        </form>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="result-header">
+        <div>
+          <p class="eyebrow">PLAYER SEARCH RESULT</p>
+
+          <h1>‘{{ keyword }}’ 검색 결과</h1>
+
+          <p class="result-count">
+            선수 기록 {{ players|length }}개 · 관련 뉴스 {{ news|length }}개
+          </p>
+        </div>
+
+        <a href="/file?keyword={{ keyword }}">
+          <button class="download-button">CSV 다운로드</button>
+        </a>
+      </section>
+
+      <section class="section-card">
+        <div class="section-title">
+          <span class="section-label">KBO</span>
+          <h2>선수 시즌 기록</h2>
+        </div>
+
+        {% if players %} {% for player in players %}
+
+        <div class="player-summary">
+          <div>
+            <h3>{{ player["name"] }}</h3>
+
+            <p class="player-meta">
+              {{ player["team"] }} · {{ player["position"] }} · {{
+              player["type"] }}
+            </p>
+          </div>
+
+          <a href="{{ player['link'] }}" target="_blank" class="detail-link">
+            KBO 상세 기록
+          </a>
+        </div>
+
+        {% if player["type"] == "타자" %}
+
+        <div class="record-grid">
+          <div class="record-item">
+            <span class="record-label">타율</span>
+            <strong class="record-value">
+              {{ player["average"] or "-" }}
+            </strong>
+          </div>
+
+          <div class="record-item">
+            <span class="record-label">경기</span>
+            <strong class="record-value"> {{ player["games"] or "-" }} </strong>
+          </div>
+
+          <div class="record-item">
+            <span class="record-label">타석</span>
+            <strong class="record-value">
+              {{ player["plate_appearances"] or "-" }}
+            </strong>
+          </div>
+
+          <div class="record-item">
+            <span class="record-label">타수</span>
+            <strong class="record-value">
+              {{ player["at_bats"] or "-" }}
+            </strong>
+          </div>
+
+          <div class="record-item">
+            <span class="record-label">득점</span>
+            <strong class="record-value"> {{ player["runs"] or "-" }} </strong>
+          </div>
+
+          <div class="record-item">
+            <span class="record-label">안타</span>
+            <strong class="record-value"> {{ player["hits"] or "-" }} </strong>
+          </div>
+
+          <div class="record-item">
+            <span class="record-label">홈런</span>
+            <strong class="record-value">
+              {{ player["homerun"] or "-" }}
+            </strong>
+          </div>
+
+          <div class="record-item">
+            <span class="record-label">타점</span>
+            <strong class="record-value"> {{ player["rbi"] or "-" }} </strong>
+          </div>
+        </div>
+
+        {% else %}
+
+        <div class="record-grid">
+          <div class="record-item">
+            <span class="record-label">ERA</span>
+            <strong class="record-value"> {{ player["era"] or "-" }} </strong>
+          </div>
+
+          <div class="record-item">
+            <span class="record-label">경기</span>
+            <strong class="record-value"> {{ player["games"] or "-" }} </strong>
+          </div>
+
+          <div class="record-item">
+            <span class="record-label">승</span>
+            <strong class="record-value"> {{ player["wins"] or "-" }} </strong>
+          </div>
+
+          <div class="record-item">
+            <span class="record-label">패</span>
+            <strong class="record-value">
+              {{ player["losses"] or "-" }}
+            </strong>
+          </div>
+
+          <div class="record-item">
+            <span class="record-label">세이브</span>
+            <strong class="record-value"> {{ player["saves"] or "-" }} </strong>
+          </div>
+
+          <div class="record-item">
+            <span class="record-label">홀드</span>
+            <strong class="record-value"> {{ player["holds"] or "-" }} </strong>
+          </div>
+
+          <div class="record-item">
+            <span class="record-label">이닝</span>
+            <strong class="record-value">
+              {{ player["innings"] or "-" }}
+            </strong>
+          </div>
+
+          <div class="record-item">
+            <span class="record-label">피안타</span>
+            <strong class="record-value"> {{ player["hits"] or "-" }} </strong>
+          </div>
+
+          <div class="record-item">
+            <span class="record-label">피홈런</span>
+            <strong class="record-value">
+              {{ player["homerun"] or "-" }}
+            </strong>
+          </div>
+
+          <div class="record-item">
+            <span class="record-label">볼넷</span>
+            <strong class="record-value"> {{ player["walks"] or "-" }} </strong>
+          </div>
+
+          <div class="record-item">
+            <span class="record-label">탈삼진</span>
+            <strong class="record-value">
+              {{ player["strikeouts"] or "-" }}
+            </strong>
+          </div>
+
+          <div class="record-item">
+            <span class="record-label">WHIP</span>
+            <strong class="record-value"> {{ player["whip"] or "-" }} </strong>
+          </div>
+        </div>
+
+        {% endif %} {% endfor %} {% else %}
+
+        <div class="empty-state">
+          <strong>선수 기록을 찾지 못했습니다.</strong>
+          <br />
+          현재 KBO 등록 선수의 정확한 이름을 입력해 주세요.
+        </div>
+
+        {% endif %}
+      </section>
+
+      <section class="section-card">
+        <div class="section-title">
+          <span class="section-label">NEWS</span>
+          <h2>관련 야구 뉴스</h2>
+        </div>
+
+        {% if news %}
+
+        <div class="news-grid">
+          {% for article in news %}
+
+          <article class="news-item">
+            <span class="news-number"> NEWS {{ loop.index }} </span>
+
+            <a href="{{ article['link'] }}" target="_blank" class="news-title">
+              {{ article["title"] }}
+            </a>
+
+            <p class="news-info">
+              {{ article["info"] }} {% if article["source"] %} · {{
+              article["source"] }} {% endif %}
+            </p>
+          </article>
+
+          {% endfor %}
+        </div>
+
+        {% else %}
+
+        <div class="empty-state">관련 뉴스를 찾지 못했습니다.</div>
+
+        {% endif %}
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,20 +1,154 @@
-<html>
+<!doctype html>
+<html lang="ko">
   <head>
-    <title>잡스크래퍼</title>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>KBO 선수 기록 검색기</title>
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
     />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(41, 98, 180, 0.42),
+            transparent 35%
+          ),
+          linear-gradient(135deg, #071426, #123864);
+      }
+
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 20px;
+      }
+
+      .search-card {
+        width: min(760px, 100%);
+        padding: 52px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.97);
+        box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+      }
+
+      .badge {
+        display: inline-block;
+        margin-bottom: 18px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: #e7efff;
+        color: #174ea6;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      h1 {
+        margin-bottom: 16px;
+        color: #10233f;
+        font-size: clamp(38px, 6vw, 62px);
+        line-height: 1.08;
+        letter-spacing: -2.5px;
+      }
+
+      .description {
+        margin-bottom: 32px;
+        color: #667085;
+        font-size: 17px;
+        line-height: 1.75;
+      }
+
+      .search-form {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+        margin: 0;
+      }
+
+      .search-form input,
+      .search-form button {
+        height: 60px;
+        margin: 0;
+        border-radius: 15px;
+      }
+
+      .search-form input {
+        padding: 0 20px;
+        font-size: 17px;
+      }
+
+      .search-form button {
+        padding: 0 32px;
+        border: 0;
+        background: #174ea6;
+        font-weight: 700;
+      }
+
+      .examples {
+        margin: 22px 0 0;
+        color: #8992a3;
+        font-size: 14px;
+      }
+
+      @media (max-width: 640px) {
+        .search-card {
+          padding: 34px 23px;
+        }
+
+        .search-form {
+          grid-template-columns: 1fr;
+        }
+
+        .search-form button {
+          width: 100%;
+        }
+      }
+    </style>
   </head>
+
   <body>
-    <main class="container">
-      <h2>17기 잡스크래퍼입니다.</h2>
-      <div>
-        <form action="/search">
-          <input name="keyword" />
-          <button class="outline">검색하기</button>
+    <main class="hero">
+      <section class="search-card">
+        <span class="badge"> KBO PLAYER SEARCH </span>
+
+        <h1>
+          선수 기록과<br />
+          야구 뉴스를 한 번에
+        </h1>
+
+        <p class="description">
+          선수 이름을 입력하면 KBO 공식 시즌 기록과 해당 선수의 관련 야구 뉴스를
+          함께 보여줍니다.
+        </p>
+
+        <form action="/search" method="get" class="search-form">
+          <input
+            type="text"
+            name="keyword"
+            placeholder="선수 이름을 입력하세요"
+            autocomplete="off"
+            required
+          />
+
+          <button type="submit">검색하기</button>
         </form>
-      </div>
+
+        <p class="examples">검색 예시: 윤동희 · 김진욱 · 원태인 · 구자욱</p>
+      </section>
     </main>
   </body>
 </html>

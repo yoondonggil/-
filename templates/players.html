@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>전체 선수 기록 | KBO Search</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <h1>KBO 선수 기록 전체 목록</h1>
+      <p>총 {{ count }}개 (전체 {{ total }}개 중)</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>연도</th>
+            <th>유형</th>
+            <th>이름</th>
+            <th>팀</th>
+            <th>기록</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for p in players %}
+          <tr>
+            <td>{{ p["year"] }}</td>
+            <td>{{ p["type"] }}</td>
+            <td>{{ p["name"] }}</td>
+            <td>{{ p["team"] }}</td>
+            <td>
+              {% if p["type"] == "타자" %} 타율 {{ p["average"] }} {% else %}
+              ERA {{ p["era"] }} {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <a href="/">← 검색으로 돌아가기</a>
+    </main>
+  </body>
+</html>
